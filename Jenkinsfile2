@@ -6,7 +6,7 @@ pipeline {
         {
           agent { 
             docker {
-                   laber 'docker'
+                   label 'docker'
                    image 'python:3.7'
                 }
            }
