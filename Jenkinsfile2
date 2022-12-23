@@ -1,8 +1,10 @@
 pipeline {
-    agent { docker { image 'python:3.7' } }
+    agent  any { docker { image 'python:3.7' } }
 
     stages {
-        stage('1-Build') {
+        stage('1-Build')
+        {
+          agent { laber "docker" image "python:3.7"}
             steps {
                 echo "Start of Stage Build"
                 echo "Building......."
