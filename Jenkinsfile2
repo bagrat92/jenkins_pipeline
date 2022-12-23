@@ -4,12 +4,12 @@ pipeline {
     stages {
         stage('1-Build')
         {
-          agent { 
-           docker {
+            agent { 
+              docker {
                    label 'docker'
                    image 'python:3.7'
-                }
-             }
+                   }
+               }
             steps {
                 echo "Start of Stage Build"
                 echo "Building......."
